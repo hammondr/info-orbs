@@ -56,7 +56,7 @@ void StockWidget::changeMode() {
 }
 
 void StockWidget::getStockData(StockDataModel &stock) {
-    String httpRequestAddress = "https://api.marketdata.app/v1/stocks/quotes/" + stock.getSymbol() + "/?token=aVhwT1NWWkhIZVBRZlIwOUlHb01keWFrMEI5Ql9QM1ZIZndtay1ub0V3OD0";
+    String httpRequestAddress = "https://api.marketdata.app/v1/stocks/quotes/" + stock.getSymbol() + "/?token=" + STOCK_API_KEY;
 
     HTTPClient http;
     http.begin(httpRequestAddress);
